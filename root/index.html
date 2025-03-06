@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Ana Sayfa</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Genel Stil */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif; /* Modern yazı stili */
+            overflow: auto; /* Sayfayı kaydırmayı etkinleştir */
+        }
+
+        /* Sabit Arka Plan */
+        .fixed-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.turas.com/wp-content/uploads/2020/08/about-right.jpg') no-repeat center center/cover;
+            z-index: -1; /* Arka planı en arkaya gönder */
+        }
+
+        /* Logo Stili */
+        .logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 150px; /* Logonun genişliği */
+            height: auto; /* Yükseklik otomatik ayarlanır */
+            z-index: 10; /* Logoyu ön plana getir */
+        }
+
+        /* İçerik Bölümü */
+        .content {
+            position: relative;
+            z-index: 1; /* İçeriği ön plana getir */
+            min-height: 100vh; /* İçeriği ekran yüksekliğine eşit yap */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* İçeriği dikeyde ortala */
+            align-items: center; /* İçeriği yatayda ortala */
+            text-align: center;
+            color: #333; /* Daha koyu gri renk */
+            padding: 20px; /* Kenar boşlukları */
+        }
+
+       .content h1 {
+    font-size: 4rem;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+    /* background-color: rgba(255, 255, 255, 0.7); Bu satırı silin */
+    /* padding: 10px 20px; Bu satırı silin */
+    /* border-radius: 10px; Bu satırı silin */
+}
+
+.content p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    animation: fadeIn 3s ease-in-out;
+    /* background-color: rgba(255, 255, 255, 0.7); Bu satırı silin */
+    /* padding: 10px 20px; Bu satırı silin */
+    /* border-radius: 10px; Bu satırı silin */
+}
+
+        /* Buton Stili */
+        .btn {
+            background-color: rgba(17, 0, 158, 0.8); /* Şeffaf buton rengi */
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 15px; /* Bombeli köşeler */
+            font-size: 1.2rem;
+            margin: 10px 0; /* Butonlar arası boşluk */
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2); /* Cam efekti için */
+            backdrop-filter: blur(10px); /* Cam efekti */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(255, 255, 255, 0.2); /* 3D ve parlaklık efekti */
+            font-weight: 600; /* Yazı kalınlığı */
+            letter-spacing: 0.5px; /* Harf aralığı */
+            display: block; /* Butonları blok yap */
+            width: 80%; /* Buton genişliği */
+            max-width: 300px; /* Maksimum genişlik */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn:hover {
+            background-color: rgba(13, 0, 122, 0.9); /* Hover rengi */
+            transform: translateY(-3px); /* Hafif yukarı hareket */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 6px 30px rgba(255, 255, 255, 0.3); /* Hover gölgesi */
+        }
+
+        /* Animasyonlar */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Tasarım */
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2.5rem;
+            }
+            .content p {
+                font-size: 1.2rem;
+            }
+            .logo {
+                width: 100px; /* Mobilde logoyu küçült */
+            }
+            .btn {
+                padding: 12px 24px; /* Mobilde buton boyutunu küçült */
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sabit Arka Plan -->
+    <div class="fixed-background"></div>
+
+    <!-- Logo -->
+    <img src="https://www.turas.com/wp-content/uploads/2024/02/turas_548x125_b.png" alt="Turas Logo" class="logo">
+
+    <!-- İçerik Bölümü -->
+    <div class="content">
+        <h1>Hoş Geldiniz!</h1>
+        <p>İnsan Kaynakları her yerde.</p>
+
+        <!-- Butonlar -->
+        <a href="https://www.turas.com" class="btn">turas.com</a>
+        <a href="https://docs.google.com/spreadsheets/d/1lA6RnE4GB2QKXfvTxTXZLrBtEo6Vmp7TZ3bgLPcj0i0/edit?usp=sharing" class="btn">Aylık Yemek Menüsü</a>
+        <a href="https://docs.google.com/document/d/1zVXWg5Zqb7I2wx4rfvQiogf7ddf-yzpDIlgqPPZ_u8c/edit?usp=sharing" class="btn">Duyurular</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2TLXd0HImIFrcUIeXyI7bD1LSh8AnBySSjDzS_WLYFmqxyA/viewform?usp=dialog" class="btn">İnsan Kaynakları İletişim Kutusu</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4wQ_FZdvL8iZSc6uyZ6u3V_Ca12tuPJUB5DKRhLWMGFm3QA/viewform?usp=dialog" class="btn">Dilek, Öneri ve Şikayet Kutusu</a>
+        <a href="https://docs.google.com/document/d/1P-Eq5B-TQv8waBQBj5mfcwSTV48ZJ2ag/edit?usp=sharing&ouid=105469187230704061693&rtpof=true&sd=true" class="btn">Çalışanlar İçin Aydınlatma Metni</a>
+        <a href="https://docs.google.com/document/d/1flAYfkDBuxINnOkNV3m3UewC9UuYprrp/edit?usp=sharing&ouid=105469187230704061693&rtpof=true&sd=true" class="btn">Kamera Aydınlatma Metni</a>
+        <a href="https://docs.google.com/document/d/1iGgWKvg6jMeFQECV811h_ecTw5RYRge2/edit?usp=sharing&ouid=105469187230704061693&rtpof=true&sd=true" class="btn">Bilgi Güvenliği Bilgilendirmesi</a>
+        <a href="https://docs.google.com/document/d/1T8a6vSeln7M5FNxhcHBp3y-vQuMX8cNw/edit?usp=sharing&ouid=105469187230704061693&rtpof=true&sd=true" class="btn">KVKK GDPR Uyumu Yönetim Kurulu Kararı</a>
+        <a href="https://docs.google.com/document/d/1whMixwCkUhmg07y1__ZjKD8b_3kOWre9/edit?usp=sharing&ouid=105469187230704061693&rtpof=true&sd=true" class="btn">GDPR-Rules</a>
+        <a href="https://docs.google.com/document/d/1jAdu4mwKD09gngrhB5w24H-KFZK-ueNS/edit?usp=sharing&ouid=105469187230704061693&rtpof=true&sd=true" class="btn">DİSİPLİN KURULU YÖNETMELİĞİ TALİMATI</a>
+        <a href="https://docs.google.com/document/d/1ucogOTZacnupxZ_8YjG5-ZvxI1bUELzB/edit?usp=sharing&ouid=105469187230704061693&rtpof=true&sd=true" class="btn">Ortak Kullanılan Cihazlar Talimatı</a>
+        <a href="https://docs.google.com/document/d/1wcJA2Zh_K9pLUN0yuXHlgY1j-mRr08EF/edit?usp=sharing&ouid=105469187230704061693&rtpof=true&sd=true" class="btn">Veri Güvenliği POP-UP Kullanım Talimatı</a>
+
+
+    </div>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
